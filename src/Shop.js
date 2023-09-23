@@ -1,194 +1,39 @@
 import HeroSection from "./Compenents/HeroSection"
 import { Container } from "react-bootstrap"
-import Timg1 from './images/trending-01.jpg'
-import Timg2 from './images/trending-02.jpg'
-import Timg3 from './images/trending-03.jpg'
-import Timg4 from './images/trending-04.jpg'
+
 import { BsFillHandbagFill } from 'react-icons/bs'
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import { ShopData } from "./shopData"
+
+
 export default function Shop() {
+
     const heroData = [
         {
             title: "OUR SHOP", link: "Shop"
         }
     ]
-    const ShopData = [
-        {
-            id: 1,
-            src: Timg1,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 2
-        },
-        {
-            id: 2,
-            src: Timg2,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 2
-        },
-        {
-            id: 3,
-            src: Timg3,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 1
-        },
-        {
-            id: 4,
-            src: Timg4,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 2
-        },
-        {
-            id: 5,
-            src: Timg4,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 1
-        },
-        {
-            id: 6,
-            src: Timg3,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 1
-        },
-        {
-            id: 7,
-            src: Timg2,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 2
-        },
-        {
-            id: 8,
-            src: Timg1,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 1
-        },
-        {
-            id: 9,
-            src: Timg3,
-            name: "Assasin  Creed",
-            genre: "Adventure",
-            cg: 2
-        },
-
-        {
-            id: 10,
-            src: Timg4,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 2
-        },
-        {
-            id: 11,
-            src: Timg3,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 2
-        },
-        {
-            id: 12,
-            src: Timg2,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 1
-        },
-        {
-            id: 13,
-            src: Timg1,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 1
-        },
-        {
-            id: 14,
-            src: Timg1,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 1
-        },
-
-        {
-            id: 15,
-            src: Timg3,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 1
-        },
-        {
-            id: 16,
-            src: Timg2,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 3
-        },
-        {
-            id: 17,
-            src: Timg4,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 3
-        },
-        {
-            id: 18,
-            src: Timg1,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 1
-        },
-        {
-            id: 19,
-            src: Timg4,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 3
-        },
-        {
-            id: 20,
-            src: Timg1,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 1
-        },
-        {
-            id: 21,
-            src: Timg3,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 3
-        },
-        {
-            id: 22,
-            src: Timg2,
-            name: "Assasin  Creed",
-            genre: "Strategy",
-            cg: 3
-        }
-    ]
-
 
 
     const filterAdvData = ShopData.filter((data) => data.cg === 1);
     const filterRacedData = ShopData.filter((data) => data.cg === 2);
     const filterStrdData = ShopData.filter((data) => data.cg === 3);
     const [toggle, setToggle] = useState(1);
+
     function tabToggle(id) {
         setToggle(id)
     }
 
     return (
+
         <div>
             {
                 heroData.map((data, index) => (
                     <HeroSection key={index} data={data} />
                 ))
             }
+
             <div className="tab-targets">
                 <ul className="tab-ul">
                     <li className={toggle === 0 ? "tab-li active-li active-tab" : "tab-li "} onClick={() => tabToggle(0)}>
@@ -205,6 +50,7 @@ export default function Shop() {
                     </li>
                 </ul>
             </div>
+
             <Container>
                 <div className="trending-games container">
 

@@ -34,13 +34,13 @@ function NavbarCom() {
 
                         <NavLink className={` nav-item  ${location.pathname === " /" ? "nav-active" : ""}`} as={NavLink} to={"/"}>Home</NavLink>
                         <NavLink className={` nav-item  ${location.pathname === " /Shop" ? "nav-active" : ""}`} as={NavLink} to={"/Shop"}>Our Shop</NavLink>
-                        <NavLink className={` nav-item  ${location.pathname === " /Product" ? "nav-active" : ""}`} as={NavLink} to={"/Product"}>Product</NavLink>
+                        {/* <NavLink className={` nav-item  ${location.pathname === " /Product" ? "nav-active" : ""}`} as={NavLink} to={"/Product"}>Product</NavLink> */}
                         <NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending nav-item me-0" : isActive ? "active nav-item me-0" : "nav-item me-0"}
                             as={NavLink} to={"/Contact"}>Contact</NavLink>
                         <NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending nav-item me-0 sign-in" : isActive ? "active nav-item me-0 sign-in" : "nav-item me-0 sign-in"}
-                            as={NavLink} to={"/SignIn"}>Sign In</NavLink>
+                            as={NavLink} to={"/signIn"}>Sign In</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

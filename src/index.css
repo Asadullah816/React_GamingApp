@@ -1066,6 +1066,13 @@ footer p {
   margin-top: 120px;
 }
 
+.game-img img {
+  width: 500px;
+  height: 530px;
+  border-radius: 25px;
+  margin-right: 80px;
+}
+
 @media(max-width:1024px) {
   .game-img {
     margin-right: 80px;
@@ -1188,7 +1195,6 @@ footer p {
     padding: 0px;
   }
 }
-
 
 /* ========================================================================== */
 /* ========================================================================== */

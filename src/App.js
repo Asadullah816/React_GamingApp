@@ -7,9 +7,11 @@ import Shop from './Shop';
 import Product from './Product';
 import Contact from './Contact';
 import Footer from './Compenents/Footer';
-import ShopData from './Shop'
+import { ShopData } from './shopData';
+import SignIn from './SignIn'
 
 
+console.log("main data cousrs", ShopData)
 
 function App() {
 
@@ -23,6 +25,7 @@ function App() {
           <Route path='/Product' element={<Product />} />
           <Route path='/Product/:id' element={<Product ShopData={ShopData} />} />
           <Route path='/Contact' element={<Contact />} />
+          <Route path="/signIn" element={<SignIn />} />
         </Routes>
         <Footer />
       </div>
